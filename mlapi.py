@@ -13,7 +13,7 @@ class ScoringItem(BaseModel):
     Salary: int
 
 with open('./rfmodel.pkl', 'rb') as f:
-    model = pickle.load(f)
+    model = pickle.load(f)  
 
 @app.post('/')
 async def scoring_endpoint(item:ScoringItem):
